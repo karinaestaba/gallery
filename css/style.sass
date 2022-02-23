@@ -1,0 +1,152 @@
+$font-primary: 'Montserrat', sans-serif
+$dark-color: hsla(160, 2%, 31%, 1)
+$medium-color: hsla(0, 0%, 66%, 1)
+
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html,
+body
+  height: 100%
+  min-height: 100vh
+  font-family: $font-primary
+  font-size: 14px
+  line-height: 17px
+  font-weight: 600
+  color: $dark-color
+  background-color: hsla(0, 0%, 100%, 1)
+
+img
+  width: 100%
+  border-radius: 16px
+
+  &:hover
+    cursor: pointer
+    filter: brightness(70%)
+    transition: all 1s ease
+
+.container
+  max-width: 1220px
+  margin: 0 auto
+  padding-left: 12px
+  padding-right: 12px
+
+.user
+  &-info-container
+    text-align: center
+    padding-top: 30px
+    padding-bottom: 30px
+
+  &-avatar
+    width: 130px
+
+  &-title
+    font-size: 14px
+    line-height: 17px
+    margin-top: 11.2px
+
+  &-subtitle
+    font-size: 10px
+    line-height: 12px
+    color: $medium-color
+
+.metric
+  &-container
+    list-style: none
+    display: flex
+    justify-content: center
+    gap: 15px
+    margin-top: 19px
+
+  &-item
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    border-radius: 12px
+    padding: 5px
+    width: 78px
+    min-height: 52px
+
+    background-color: hsla(0, 0%, 90%, 1)
+    border-radius: 12px
+    font-size: 12px
+    line-height: 15px
+
+  &-quantity
+    margin-bottom: 2px
+    display: block
+
+  &-description
+    display: block
+    color: $medium-color
+
+.gallery
+  &-grid
+    margin-top: 10px
+    margin-bottom: 10px
+    display: grid
+    gap: 12px
+    grid-template-areas: "child-1 child-2 child-2" "child-3 child-3 child-4" "child-5 child-6 child-4"
+
+  &-item
+    display: block
+
+    > img
+      height: 100%
+      object-fit: cover
+
+    &:nth-child(2n + 1)
+      grid-area: child-1
+
+    &:nth-child(3n + 2)
+      grid-area: child-2
+
+    &:nth-child(4n + 3)
+      grid-area: child-3
+    
+    &:nth-child(5n + 4)
+      grid-area: child-4
+
+    &:nth-child(6n + 5)
+      grid-area: child-5
+
+    &:nth-child(7n + 6)
+      grid-area: child-6
+
+@media screen and (min-width: 998px)
+  html,
+  body
+
+  .user
+    &-title
+      font-size: 24px
+      line-height: 29px
+      margin-bottom: 8px
+
+    &-subtitle
+      font-size: 14px
+      line-height: 17px
+      margin-bottom: 24px
+    
+  .gallery
+    &-grid
+      gap: 32px
+      margin-top: 34px
+      margin-bottom: 50px
+
+  .metric
+    &-item
+      padding: 14px
+      width: 100px
+
+    &-quantity
+      margin-bottom: 4px
+
+  .user
+    &-info-container
+      padding-top: 60px
