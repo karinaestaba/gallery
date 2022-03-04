@@ -118,6 +118,24 @@ img
     &:nth-child(7n + 6)
       grid-area: child-6
 
+footer
+  &.credits
+    font-size: 10px
+    line-height: 14px
+    text-align: center
+    color: $medium-color
+    padding-bottom: 20px
+
+    a
+      color: lighten($dark-color, 25%)
+      font-weight: 700
+      text-decoration: none
+
+      &:hover,
+      &:active,
+      &:focus
+        color: darken($medium-color, 10%)
+
 @media screen and (min-width: 998px)
   .user
     &-title
@@ -147,3 +165,8 @@ img
   .user
     &-info-container
       padding-top: 60px
+
+  footer
+    &.credits
+      font-size: 12px
+      line-height: 16px
