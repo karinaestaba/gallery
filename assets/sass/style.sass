@@ -124,17 +124,21 @@ footer
     line-height: 14px
     text-align: center
     color: $medium-color
-    padding-bottom: 20px
+    padding: 20px
 
     a
       color: lighten($dark-color, 25%)
-      font-weight: 700
       text-decoration: none
+      white-space: nowrap
+      transition: all .3s ease
 
       &:hover,
       &:active,
       &:focus
-        color: darken($medium-color, 10%)
+        opacity: .8
+
+      img
+        width: 10px
 
 @media screen and (min-width: 998px)
   .user
